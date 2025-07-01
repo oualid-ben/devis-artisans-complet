@@ -15,6 +15,13 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <script>
+      // Redirige toutes les routes SPA vers index.html sur GitHub Pages
+      if (location.pathname !== '/' && !location.pathname.includes('.')) {
+        location.replace(location.origin + '/devis-artisans-complet/');
+      }
+    </script>
+
     <script type="module" crossorigin src="/devis-artisans-complet/assets/index-B_4LuBzK.js"></script>
     <link rel="stylesheet" crossorigin href="/devis-artisans-complet/assets/index-qy7Ep4g-.css">
   </head>
