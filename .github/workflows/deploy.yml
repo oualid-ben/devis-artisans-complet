@@ -5,14 +5,12 @@ on:
     branches:
       - main
 
-permissions:
-  contents: write
-
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Setup Node.js
@@ -24,16 +22,11 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: |
-          npm run build
-          cp dist/index.html dist/404.html
-
-      - name: Show dist content
-        run: ls -R dist
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-    
+
