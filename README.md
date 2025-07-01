@@ -1,4 +1,4 @@
-# Welcome to the project: Devis.
+# Welcome to your Lovable project
 
 ## Project info
 
